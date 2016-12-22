@@ -16,5 +16,5 @@ Dir[File.join(ENGINE_RAILS_ROOT, "spec/support/**/*.rb")].each {|f| require f }
 #
 # General config for RSpec
 RSpec.configure do |config|
-
+  config.expect_with(:rspec) { |c| c.syntax = :should }
 end

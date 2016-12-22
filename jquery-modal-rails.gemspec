@@ -8,12 +8,12 @@ Gem::Specification.new do |s|
   s.authors     = ["Dirk Eisenberg"]
   s.email       = ["dirk.eisenberg@gmail.com"]
   s.homepage    = "https://github.com/dei79/jquery-modal-rails"
-  s.summary     = "The simplest possible modal for jQuery for the Rails 3.1+ asset pipeline"
-  s.description = "The simplest possible modal for jQuery for the Rails 3.1+ asset pipeline based on https://github.com/kylefox/jquery-modal."
+  s.summary     = "The simplest possible modal for jQuery for the Rails 5.0+ asset pipeline"
+  s.description = "The simplest possible modal for jQuery for the Rails 5.0+ asset pipeline based on https://github.com/kylefox/jquery-modal."
 
   s.required_rubygems_version = ">= 1.3.6"
 
-  s.add_dependency "railties", ">= 3.2.0", "< 5.0"
+  s.add_dependency "railties", '~> 5.0.0', '>= 5.0.0.1'
   s.add_dependency "thor",     "~> 0.14"
   s.add_dependency "jquery-ui-rails"
   s.add_dependency "uuidtools"

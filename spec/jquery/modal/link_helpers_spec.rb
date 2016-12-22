@@ -7,12 +7,12 @@ describe Jquery::Helpers do
 
   it "offers default link" do
     link_to_modal("SimpleDialog", "http://www.google.de", :id => 1).should \
-      eq('<a href="http://www.google.de" id="1" rel="modal:open">SimpleDialog</a>')
+      eq('<a id="1" rel="modal:open" href="http://www.google.de">SimpleDialog</a>')
   end
 
   it "offers AJAX link" do
     link_to_modal("SimpleDialog", "http://www.google.de", :id => 1, :remote => true).should \
-      eq('<a href="http://www.google.de" id="1" rel="modal:open:ajaxpost">SimpleDialog</a>')
+      eq('<a id="1" rel="modal:open:ajaxpost" href="http://www.google.de">SimpleDialog</a>')
   end
 
   it "supports block for default link" do
@@ -20,7 +20,7 @@ describe Jquery::Helpers do
       "SimpleDialog"
     end
 
-    link.should eq('<a href="http://www.google.de" id="1" rel="modal:open">SimpleDialog</a>')
+    link.should eq('<a id="1" rel="modal:open" href="http://www.google.de">SimpleDialog</a>')
   end
 
   it "supports block for AJAX link" do
@@ -28,7 +28,7 @@ describe Jquery::Helpers do
       "SimpleDialog"
     end
 
-    link.should eq('<a href="http://www.google.de" id="1" rel="modal:open:ajaxpost">SimpleDialog</a>')
+    link.should eq('<a id="1" rel="modal:open:ajaxpost" href="http://www.google.de">SimpleDialog</a>')
   end
 
   it "supports block for complex AJAX link" do
@@ -40,7 +40,7 @@ describe Jquery::Helpers do
       end
     end
 
-    link.should eq('<a href="http://www.google.de" id="1" rel="modal:open:ajaxpost"><div><p>SimpleDialog</p></div></a>')
+    link.should eq('<a id="1" rel="modal:open:ajaxpost" href="http://www.google.de"><div><p>SimpleDialog</p></div></a>')
   end
 
   it "does not crash with only two paraemters" do

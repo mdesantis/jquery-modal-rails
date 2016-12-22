@@ -1,7 +1,3 @@
-class User < ActiveRecord::Base
-  attr_accessible :email, :name
-
-  validates :name, :presence => true
-
+class User < ApplicationRecord
+  validates_presence_of :email
 end
-
