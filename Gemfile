@@ -17,8 +17,6 @@ gem 'coffee-rails', '~> 4.2'
 
 gem 'uglifier', '>= 1.3.0'
 
-gem 'jquery-ui-rails'
-
 gem 'jquery-rails'
 
 # Specify your gem's dependencies in jquery-modal-rails.gemspec
